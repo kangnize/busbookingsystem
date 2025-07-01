@@ -1,0 +1,64 @@
+/* Booking layout grid (optional, not used in flex layout version) */
+.bus-layout {
+  margin-bottom: 20px;
+}
+
+/* Each row of seats */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* The space between 2 left + 2 right seats */
+.seat-gap {
+  width: 40px;
+}
+
+/* Driver seat */
+.driver-seat {
+  background-color: #343a40;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* General seat style */
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #28a745; /* default: available */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.seat:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Selected seat */
+.seat.selected {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Booked seat */
+.seat.booked {
+  background-color: #dc3545;
+  cursor: not-allowed;
+}
+
+/* Available seat (redundant but safe for state-specific class) */
+.seat.available {
+  background-color: #28a745;
+}
