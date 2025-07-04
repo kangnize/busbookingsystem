@@ -14,9 +14,13 @@ export default function Search() {
   ];
 
   const handleSearch = (e) => {
-    e.preventDefault();
-    navigate('/book/12345'); // You will replace this with actual logic
-  };
+  e.preventDefault();
+
+  // For now, navigate to a dummy busId, e.g., 12345
+  // Later, you can get a real busId from a database
+  navigate(`/booking/12345?origin=${origin}&destination=${destination}&date=${date}`);
+};
+
 
   return (
     <PageWithBackground>
